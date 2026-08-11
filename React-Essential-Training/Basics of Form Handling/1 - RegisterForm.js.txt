@@ -1,0 +1,180 @@
+import React, { Component } from "react";
+
+class RegisterForm extends Component{
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            username: '',
+            gender: 'male',
+            address: '',
+            course: 'Python'
+        }
+    }
+
+    handleUsernameChange = event => {
+
+        this.setState({
+            username: event.target.value
+        })
+
+    }
+
+    handleGenderChange = event => {
+
+        this.setState({
+            gender: event.target.value
+        })
+
+    }
+
+    handleAddressChange = event => {
+
+        this.setState({
+            address: event.target.value
+        })
+
+    }
+
+    handleCourseChange = event => {
+
+        this.setState({
+            course: event.target.value
+        })
+
+    }
+
+    handleRegisterSubmit = event => {
+     
+        alert(`${this.state.username} ${this.state.address} ${this.state.course}`)
+     
+        // prevent form submission
+        event.preventDefault(); 
+    }
+
+    render() {
+        return (
+            <div>
+            
+            <h1>Register Form</h1>
+
+            <form onSubmit={this.handleRegisterSubmit}>
+
+            {/* Username start here */}
+
+            <div>
+
+            <label>Username</label>
+
+            <input type="text"
+            value={this.state.username}
+            onChange={this.handleUsernameChange} />
+
+            </div>
+
+            {/* Username end here */}
+
+            {/* Gender start here */}
+
+            <div>
+
+            <label>Gender</label>
+
+            {/*  Male start here*/}
+
+            <div>
+
+            <label>
+
+            <input
+            type="radio"
+            value="male"
+            checked={this.state.gender === "male"}
+            onChange={this.handleGenderChange}
+            />
+
+            Male
+
+            </label>
+
+            </div>
+
+            {/* Male end here */}
+
+            {/* Female start here */}
+
+            <div>
+
+            <label>
+
+            <input
+            type="radio"
+            value="female"
+            checked={this.state.gender === "female"}
+            onChange={this.handleGenderChange}
+            />
+
+            Female
+
+            </label>
+
+            </div>
+
+            {/* Female end here */}
+
+            </div>
+
+            {/* Gender end here */}
+
+            {/* Address start here */}
+
+            <div>
+
+            <label>Address</label>
+
+            <textarea 
+            value={this.state.address}
+            onChange={this.handleAddressChange}>
+            </textarea>
+
+            </div>
+
+            {/* Address end here */}
+
+
+            {/* Course start here */}
+
+            <div>
+
+            <label>Course</label>
+
+            <select 
+            value={this.state.course}
+            onChange={this.handleCourseChange}>
+
+            <option value="C">C</option>
+            <option value="CPP">CPP</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+
+            </select>
+
+            </div>
+
+            {/* Course end here */}
+
+            <button 
+            type="submit">
+                Register
+            </button>
+
+            </form>
+            
+            </div>
+        )
+    }
+
+}
+
+export default RegisterForm;

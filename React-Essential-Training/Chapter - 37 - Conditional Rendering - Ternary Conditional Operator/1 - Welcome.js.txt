@@ -1,0 +1,28 @@
+import React, { Component } from "react";
+
+//  Ternary Conditional Operator
+
+class Welcome extends Component{
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            isLoggedIn: false
+        }
+    }
+
+    
+    render() {
+
+        return this.state.isLoggedIn ? (
+            <div>Welcome Prabhu</div>
+        ) : (
+            <div>Welcome Guest</div>
+        )
+    
+    }
+
+}
+
+export default Welcome;

@@ -1,0 +1,47 @@
+import React, { useState } from 'react';
+
+const RadioButtonGroup = () => {
+
+  const [selectedGender, setSelectedGender] = useState('Male');
+
+  const handleGenderChange = (e) => {
+    setSelectedGender(e.target.value);
+  };
+
+  return (
+    <div className="container mt-5">
+      <h3>Select Gender:</h3>
+      <div className="form-check">
+        <input
+          className="form-check-input"
+          type="radio"
+          name="gender"
+          id="male"
+          value="Male"
+          checked={selectedGender === 'Male'}
+          onChange={handleGenderChange}
+        />
+        <label className="form-check-label" htmlFor="male">
+          Male
+        </label>
+      </div>
+      <div className="form-check">
+        <input
+          className="form-check-input"
+          type="radio"
+          name="gender"
+          id="female"
+          value="Female"
+          checked={selectedGender === 'Female'}
+          onChange={handleGenderChange}
+        />
+        <label className="form-check-label" htmlFor="female">
+          Female
+        </label>
+      </div>
+      <p className="mt-3">Selected Gender: {selectedGender}</p>
+    </div>
+  );
+};
+
+export default RadioButtonGroup;

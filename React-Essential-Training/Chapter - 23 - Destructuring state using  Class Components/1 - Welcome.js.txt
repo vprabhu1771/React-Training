@@ -1,0 +1,29 @@
+import React, { Component } from "react";
+
+class Welcome extends Component{
+
+    state = {
+        username: "JohnDoe",
+        email: "johndoe@example.com",
+        age: 25,
+        gender: "male"
+    };
+
+    render() {
+
+        // Destructure state properties for easier access
+        const { username, email, age, gender } = this.state;
+
+        return (
+            <div>
+              <p>Username: {username}</p>
+              <p>Email: {email}</p>
+              <p>Age: {age}</p>
+              <p>Gender: {gender}</p>
+            </div>
+        )
+    }
+
+}
+
+export default Welcome;

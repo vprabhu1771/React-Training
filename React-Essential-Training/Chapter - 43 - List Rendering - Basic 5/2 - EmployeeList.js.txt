@@ -1,0 +1,33 @@
+import React from "react";
+import EmployeeTable from "./EmployeeTable";
+
+function EmployeeList() {
+    
+    const persons = 
+    [
+        {
+            id: 1,
+            name: 'Bruce',
+            age: 29,
+            skill: 'Full Stack Developer'
+        },
+        {
+            id: 2,
+            name: 'Clark',
+            age: 19,
+            skill: 'Frontend Developer'
+        },
+        {
+            id: 3,
+            name: 'Diana',
+            age: 28,
+            skill: 'Android Developer'
+        }
+    ];
+
+    const employeeTable = <EmployeeTable employees={persons} />;
+
+    return <div>{employeeTable}</div>
+}
+
+export default EmployeeList;

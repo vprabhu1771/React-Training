@@ -1,0 +1,8 @@
+Folder Setup
+
+project_name -> src -> components
+
+
+File Setup
+
+project_name -> src -> components -> CheckboxGroup.jsx

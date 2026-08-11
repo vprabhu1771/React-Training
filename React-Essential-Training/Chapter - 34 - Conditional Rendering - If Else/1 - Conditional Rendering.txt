@@ -1,0 +1,7 @@
+If Else
+
+Element Varibales
+
+Ternary Conditional Operator
+
+Short Circuit Operator

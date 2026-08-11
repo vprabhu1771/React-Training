@@ -1,0 +1,27 @@
+myapp -> src -> 
+
+Create Folder
+
+actions
+
+components
+
+reducers
+
+
+
+Main Loading JS Component
+
+under myapp -> src -> 
+
+index.js
+
+
+
+
+Main Loading HTML
+
+under myapp -> public -> 
+
+index.html
+

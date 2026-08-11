@@ -1,0 +1,34 @@
+import React, { Component } from "react";
+
+// Element Variables
+
+class Welcome2 extends Component{
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            isLoggedIn: false
+        }
+    }
+
+    
+    render() {
+
+        let message
+
+        if (this.state.isLoggedIn) 
+        {
+            message = <div>Welcome Prabhu</div>
+        }
+        else
+        {
+            message = <div>Welcome Guest</div>
+        }
+
+        return <div>{message}</div>
+    }
+
+}
+
+export default Welcome2;

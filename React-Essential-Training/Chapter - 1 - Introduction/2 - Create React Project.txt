@@ -1,0 +1,24 @@
+Create React Project
+
+npx create-react-app myapp
+
+
+Change Directory to Project Directory
+
+cd myapp
+
+
+Open Project Directory in VSCode
+
+code .
+
+
+Run React Server
+
+npm start
+
+
+Stop React Server
+
+CTRL + C
+

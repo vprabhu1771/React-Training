@@ -1,0 +1,14 @@
+Folder Setup
+
+project_name -> src -> components
+
+
+File Setup
+
+project_name -> src -> components -> TopNavBar.jsx
+
+project_name -> src -> components -> Home.jsx
+
+project_name -> src -> components -> Product.jsx
+
+project_name -> src -> components -> About.jsx

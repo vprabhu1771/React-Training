@@ -1,0 +1,63 @@
+import React from "react";
+
+function EmployeeList() {
+    
+    const persons = 
+    [
+        {
+            id: 1,
+            name: 'Bruce',
+            age: 29,
+            skill: 'Full Stack Developer'
+        },
+        {
+            id: 2,
+            name: 'Clark',
+            age: 19,
+            skill: 'Frontend Developer'
+        },
+        {
+            id: 3,
+            name: 'Diana',
+            age: 28,
+            skill: 'Android Developer'
+        }
+    ];
+
+    const renderTableHeader = () => {
+        let header = Object.keys(persons[0])
+        return header.map((key, index) => {
+            return <th key={index}>{key.toUpperCase()}</th>
+        })
+    }
+
+    const renderTableData = () => {
+        return persons.map((person, index) => {
+            const { id, name, age, skill } = person
+            return (
+                <tr key={id}>
+                    <td>{id}</td>
+                    <td>{name}</td>
+                    <td>{age}</td>
+                    <td>{skill}</td>
+                </tr>
+            )
+        })
+    }
+
+    return (
+        <div>
+            <h1>Employee List</h1>
+            <table id='employees'>            
+                <thead>
+                    <tr>{renderTableHeader()}</tr>
+                </thead>
+                <tbody>
+                    {renderTableData()}
+                </tbody>
+            </table>
+        </div>
+    )
+}
+
+export default EmployeeList;

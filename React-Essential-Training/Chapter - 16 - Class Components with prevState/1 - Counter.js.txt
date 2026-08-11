@@ -1,0 +1,64 @@
+import React, { Component } from 'react';
+
+class Counter extends Component {
+
+    constructor() {
+        super()
+        this.state = {
+            count: 0
+        }
+    }
+
+    increment() {
+        this.setState(prevState => ({
+            count: prevState.count + 1
+        }))
+        console.log(this.state.count);
+    }
+
+    decrement() {
+        this.setState(prevState => ({
+            count: prevState.count - 1
+        }))
+        console.log(this.state.count);
+    }
+
+    incrementFive()
+    {
+        this.increment()
+        this.increment()
+        this.increment()
+        this.increment()
+        this.increment()
+    }
+
+    decrementFive()
+    {
+        this.decrement()
+        this.decrement()
+        this.decrement()
+        this.decrement()
+        this.decrement()
+    }
+
+    render() {
+        return (
+            <div>
+                
+                <h1>Counter - {this.state.count}</h1>
+                
+                <button
+                onClick={() => this.incrementFive()}>
+                    Increment 5
+                </button>
+
+                <button
+                onClick={() => this.decrementFive()}>
+                    Decrement 5
+                </button>
+            </div>
+        )
+    }
+}
+
+export default Counter;

@@ -1,0 +1,46 @@
+import React, { Component } from 'react';
+
+class NameConverter extends Component {
+
+  constructor(props) {
+
+    super(props);
+
+    this.state = {
+      name: ''
+    };
+
+  }
+
+  handleChange = (event) => {
+
+    const { value } = event.target;
+
+    this.setState({ name: value.toUpperCase() });
+
+  }
+
+  render() {
+
+    const { name } = this.state;
+
+    return (
+      <div>
+
+        <h1>{name}</h1>
+
+        <label htmlFor="name">Name:</label>
+
+        <input
+          type="text"
+          id="name"
+          value={name}
+          onChange={this.handleChange}
+        />
+
+      </div>
+    );
+  }
+}
+
+export default NameConverter;

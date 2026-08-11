@@ -1,0 +1,47 @@
+import React, { Component } from 'react';
+
+class Counter extends Component {
+
+    constructor() {
+        super()
+        this.state = {
+            count: 0
+        }
+    }
+
+    increment() {
+        this.setState((prevState, props) => ({
+            count: prevState.count + props.incrementValue
+        }))
+        console.log(this.state.count);
+    }
+
+    decrement() {
+        this.setState((prevState, props) => ({
+            count: prevState.count - props.decrementValue
+        }))
+        console.log(this.state.count);
+    }
+
+    render() {
+        return (
+          <div>
+              
+            <h1>Counter - {this.state.count}</h1>
+              
+            <button
+            onClick={() => this.increment()}>
+                Increment {this.props.incrementValue}
+            </button>
+
+            <button
+            onClick={() => this.decrement()}>
+                Decrement {this.props.decrementValue}
+            </button>
+
+          </div>
+        )
+    }
+}
+
+export default Counter;

@@ -1,0 +1,9 @@
+import React from "react";
+
+// Arrow Function
+const Welcome = (props) => {
+    console.log(props);
+    return <h1>Welcome {props.name} a.k.a {props.heroName}</h1>
+}
+
+export default Welcome;

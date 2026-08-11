@@ -1,0 +1,12 @@
+import React from "react";
+
+function FruitsList() {
+    
+    const fruits = ['Apple', 'Orange', 'Mango'];
+
+    const fruitList = fruits.map(row =><h2>{row}</h2> );
+    
+    return <div>{fruitList}</div>
+}
+
+export default FruitsList

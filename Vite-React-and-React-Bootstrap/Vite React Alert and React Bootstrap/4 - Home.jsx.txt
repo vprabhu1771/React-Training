@@ -1,0 +1,19 @@
+import React from 'react';
+import AlertComponent from './AlertComponent';
+
+function Home() {
+  return (
+    <div className='container'>
+        <AlertComponent variant="success" message="This is a success alert!" />
+        <AlertComponent variant="danger" message="This is a danger alert!" />
+        <AlertComponent variant="warning" message="This is a warning alert!" />
+        <AlertComponent variant="info" message="This is an info alert!" />
+        <AlertComponent variant="primary" message="This is a primary alert!" />
+        <AlertComponent variant="secondary" message="This is a secondary alert!" />
+        <AlertComponent variant="light" message="This is a light alert!" />
+        <AlertComponent variant="dark" message="This is a dark alert!" />
+    </div>
+  )
+}
+
+export default Home;

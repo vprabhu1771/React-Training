@@ -1,0 +1,19 @@
+Folder Setup
+
+project_folder - src -> components -> frontend
+
+project_folder - src -> components -> frontend -> layout
+
+File Setup
+
+project_folder - src -> components -> frontend -> layout
+
+AppLayout.jsx
+TopBar.jsx
+Header.jsx
+Footer.jsx
+
+project_folder - src -> components -> frontend
+
+ForgetPassword.jsx
+

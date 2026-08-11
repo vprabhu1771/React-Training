@@ -1,0 +1,22 @@
+import './App.css';
+import Welcome from './components/Welcome';
+
+function App() {
+  return (
+    <div className="App">
+
+      <Welcome name="Bruce Wayne" heroName="Batman">
+        <p>This is children props</p>  
+      </Welcome>
+
+      <Welcome name="Clark" heroName="Superman" />
+
+      <Welcome name="Peter Parker" heroName="Spiderman">
+        <button>Action</button>
+      </Welcome>
+      
+    </div>
+  );
+}
+
+export default App;

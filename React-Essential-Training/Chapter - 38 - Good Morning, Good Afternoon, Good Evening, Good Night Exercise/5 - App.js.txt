@@ -1,0 +1,18 @@
+import './App.css';
+import GoodAfternoon from './components/GoodAfternoon';
+import GoodEvening from './components/GoodEvening';
+import GoodMorning from './components/GoodMorning';
+import GoodNight from './components/GoodNight';
+
+function App() {
+  return (
+    <div className="App">
+     <GoodMorning/>
+     <GoodAfternoon/>
+     <GoodEvening/>
+     <GoodNight/>
+    </div>
+  );
+}
+
+export default App;

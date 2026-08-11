@@ -1,0 +1,19 @@
+import React, { useState } from 'react';
+
+const Message = () => {
+
+  const [message, setMessage] = useState('Welcome Visitor');
+
+  const changeMessage = () => {
+    setMessage('Thank you for subscribing');
+  }
+
+  return (
+    <div>
+      <h1>{message}</h1>
+      <button onClick={changeMessage.bind(this)}>Subscribe</button>
+    </div>
+  );
+}
+
+export default Message;

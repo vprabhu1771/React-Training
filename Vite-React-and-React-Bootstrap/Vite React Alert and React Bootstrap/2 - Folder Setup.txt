@@ -1,0 +1,10 @@
+Folder Setup
+
+project_name -> src -> components
+
+
+File Setup
+
+project_name -> src -> components -> AlertComponent.jsx
+
+project_name -> src -> components -> Home.jsx

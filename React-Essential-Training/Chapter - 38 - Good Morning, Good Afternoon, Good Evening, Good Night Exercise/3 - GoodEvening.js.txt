@@ -1,0 +1,6 @@
+import React from "react";
+
+
+const GoodEvening = () => <h1>Good Evening</h1>
+
+export default GoodEvening;

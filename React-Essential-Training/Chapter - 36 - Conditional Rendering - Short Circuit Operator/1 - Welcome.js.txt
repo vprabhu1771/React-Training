@@ -1,0 +1,24 @@
+import React, { Component } from "react";
+
+//  Short Circuit Operator
+
+class Welcome4 extends Component{
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            isLoggedIn: true
+        }
+    }
+
+    
+    render() {
+
+        return this.state.isLoggedIn && <div>Welcome Prabhu</div>
+            
+    }
+
+}
+
+export default Welcome4;

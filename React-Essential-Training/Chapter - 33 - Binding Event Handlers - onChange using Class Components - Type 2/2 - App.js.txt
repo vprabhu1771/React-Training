@@ -1,0 +1,14 @@
+import './App.css';
+import NameConverter from './components/NameConverter';
+
+function App() {
+  return (
+    <div className="App">
+
+     <NameConverter />
+
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,8 @@
+In Windows
+
+echo> postcss.config.js
+
+
+Linux Or macOS
+
+touch postcss.config.js

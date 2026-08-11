@@ -1,0 +1,60 @@
+import React, { Component } from 'react';
+
+class Counter extends Component {
+
+    constructor() {
+        super()
+        this.state = {
+            count: 0
+        }
+    }
+
+    increment() {
+        // Wrong Way to Implement
+        // this.state.count = this.state.count + 1
+
+        // Correct Way to Implement
+        this.setState({
+            count: this.state.count + 1
+        },
+        () => {
+            console.log('Increment Callback value', this.state.count);
+        })
+        console.log(this.state.count);
+    }
+
+    decrement() {
+        // Wrong Way to Implement
+        // this.state.count = this.state.count - 1
+
+        // Correct Way to Implement
+        this.setState({
+            count: this.state.count - 1
+        },
+        () => {
+            console.log('Decrement Callback value', this.state.count);
+        })
+        console.log(this.state.count);
+    }
+
+    render() {
+        return (
+            <div>
+                
+                <h1>Counter - {this.state.count}</h1>
+                
+                <button
+                onClick={() => this.increment()}>
+                    Increment
+                </button>
+
+                <button
+                onClick={() => this.decrement()}>
+                    Decrement
+                </button>
+            </div>
+        )
+    }
+}
+
+export default Counter;
